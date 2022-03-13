@@ -1,0 +1,250 @@
+%! TEX program = XeLaTeX
+
+\documentclass{article}
+
+% Factor = 3m/6m.
+% This is obtained by dividing the distance at which the chart is kept
+% by 6 m.  Note that this sometimes needs to be slightly tweaked to get
+% the required optotype width.
+\def\factor{0.5}
+
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[pass]{geometry}
+\usepackage{longtable}
+\setlength\LTpre{0pt} % space before table
+
+\newfontfamily\optsans{Optician-Sans.otf}[LetterSpace=40]
+\def\optotype#1#2{\begin{tabular}{c}\resizebox{!}{#1}{\selectfont\optsans#2}\end{tabular}}
+
+% https://tex.stackexchange.com/q/172234
+\newcommand{\deflen}[2]{%
+  \expandafter\newlength\csname #1\endcsname
+  \expandafter\setlength\csname #1\endcsname{#2}%
+}
+
+% Length definitions
+\deflen{SetA}{247.37pt} % 60 m
+\deflen{SetB}{148.422pt} % 36 m
+\deflen{SetC}{123.685pt} % 30 m
+\deflen{SetD}{98.948pt} % 24 m
+\deflen{SetE}{74.211pt} % 18 m
+\deflen{SetF}{49.474pt} % 12 m
+\deflen{SetG}{24.737pt} % 6 m
+\deflen{SetH}{20.614pt} % 5 m
+\deflen{SetI}{16.491pt} % 4 m
+
+\definecolor{smoke}{rgb}{0.6,0.6,0.6}
+\deflen{acuitylen}{0.25in}
+\def\acuity#1#2{\resizebox{!}{\acuitylen}{$#1^{\,\color{smoke}(#2)}$}}
+
+\makeatletter
+\def\colorrule#1#2{\color{#1}\leavevmode\leaders\hrule height #2\hfill\kern\z@}
+\makeatother
+
+\pagestyle{empty}
+
+\begin{document}
+
+\newgeometry{margin=0.5in}
+
+\pagebreak
+\begin{center}
+\renewcommand*{\arraystretch}{3.5}
+\begin{longtable}{rc}
+\acuity{6/60}{20/200} & \optotype{\factor\SetA}{K} \\
+\acuity{6/36}{20/120} & \optotype{\factor\SetB}{FT} \\
+\acuity{6/30}{20/100} & \optotype{\factor\SetC}{TFO} \\
+\acuity{6/24}{20/80} & \optotype{\factor\SetD}{VNFT} \\
+\acuity{6/18}{20/60} & \optotype{\factor\SetE}{CETKV} \\
+& \colorrule{cyan}{0.65cm} \\
+\acuity{6/12}{20/40} & \optotype{\factor\SetF}{VEZFHUNO} \\
+\acuity{6/6}{20/20} & \optotype{\factor\SetG}{DZHFEKUORVNL} \\
+& \colorrule{red}{0.65cm} \\
+\acuity{6/5}{20/16} & \optotype{\factor\SetH}{KDHCFPRVZUENTO} \\
+\acuity{6/4}{20/13} & \optotype{\factor\SetI}{NVHTKOCRZFUEDPL} \\
+\end{longtable}
+\end{center}
+
+% Tables
+
+\pagebreak
+\begin{center}
+\renewcommand*{\arraystretch}{3.5}
+\begin{longtable}{rc}
+\acuity{6/60}{20/200} & \optotype{\factor\SetA}{D} \\
+\acuity{6/36}{20/120} & \optotype{\factor\SetB}{TV} \\
+\acuity{6/30}{20/100} & \optotype{\factor\SetC}{ZNO} \\
+\acuity{6/24}{20/80} & \optotype{\factor\SetD}{KDCH} \\
+\acuity{6/18}{20/60} & \optotype{\factor\SetE}{KVODH} \\
+& \colorrule{cyan}{0.65cm} \\
+\acuity{6/12}{20/40} & \optotype{\factor\SetF}{KPFTRHEU} \\
+\acuity{6/6}{20/20} & \optotype{\factor\SetG}{DKPHLUNEZRVT} \\
+& \colorrule{red}{0.65cm} \\
+\acuity{6/5}{20/16} & \optotype{\factor\SetH}{KVCDTUPNROEFLH} \\
+\acuity{6/4}{20/13} & \optotype{\factor\SetI}{PCHZVOFTEURDNLK} \\
+\end{longtable}
+\end{center}
+
+% Tables
+
+\pagebreak
+\begin{center}
+\renewcommand*{\arraystretch}{3.5}
+\begin{longtable}{rc}
+\acuity{6/60}{20/200} & \optotype{\factor\SetA}{E} \\
+\acuity{6/36}{20/120} & \optotype{\factor\SetB}{VD} \\
+\acuity{6/30}{20/100} & \optotype{\factor\SetC}{HDF} \\
+\acuity{6/24}{20/80} & \optotype{\factor\SetD}{DRFU} \\
+\acuity{6/18}{20/60} & \optotype{\factor\SetE}{CFDVZ} \\
+& \colorrule{cyan}{0.65cm} \\
+\acuity{6/12}{20/40} & \optotype{\factor\SetF}{HVECRNDU} \\
+\acuity{6/6}{20/20} & \optotype{\factor\SetG}{LPFOTEUCNHZR} \\
+& \colorrule{red}{0.65cm} \\
+\acuity{6/5}{20/16} & \optotype{\factor\SetH}{OVRPTNHKLCUFDE} \\
+\acuity{6/4}{20/13} & \optotype{\factor\SetI}{HEDOCFRLTVUZKNP} \\
+\end{longtable}
+\end{center}
+
+% Tables
+
+\pagebreak
+\begin{center}
+\renewcommand*{\arraystretch}{3.5}
+\begin{longtable}{rc}
+\acuity{6/60}{20/200} & \optotype{\factor\SetA}{U} \\
+\acuity{6/36}{20/120} & \optotype{\factor\SetB}{EH} \\
+\acuity{6/30}{20/100} & \optotype{\factor\SetC}{TRN} \\
+\acuity{6/24}{20/80} & \optotype{\factor\SetD}{CNRH} \\
+\acuity{6/18}{20/60} & \optotype{\factor\SetE}{OHVNZ} \\
+& \colorrule{cyan}{0.65cm} \\
+\acuity{6/12}{20/40} & \optotype{\factor\SetF}{FCTEHZPN} \\
+\acuity{6/6}{20/20} & \optotype{\factor\SetG}{LZROFVUCDHNT} \\
+& \colorrule{red}{0.65cm} \\
+\acuity{6/5}{20/16} & \optotype{\factor\SetH}{LCUVFHOZERPDTN} \\
+\acuity{6/4}{20/13} & \optotype{\factor\SetI}{CNFTHERZUPOKVDL} \\
+\end{longtable}
+\end{center}
+
+% Tables
+
+\pagebreak
+\begin{center}
+\renewcommand*{\arraystretch}{3.5}
+\begin{longtable}{rc}
+\acuity{6/60}{20/200} & \optotype{\factor\SetA}{P} \\
+\acuity{6/36}{20/120} & \optotype{\factor\SetB}{TL} \\
+\acuity{6/30}{20/100} & \optotype{\factor\SetC}{HFE} \\
+\acuity{6/24}{20/80} & \optotype{\factor\SetD}{ZNLR} \\
+\acuity{6/18}{20/60} & \optotype{\factor\SetE}{LUEOV} \\
+& \colorrule{cyan}{0.65cm} \\
+\acuity{6/12}{20/40} & \optotype{\factor\SetF}{VEPKFHDZ} \\
+\acuity{6/6}{20/20} & \optotype{\factor\SetG}{FERVKNUTHCOP} \\
+& \colorrule{red}{0.65cm} \\
+\acuity{6/5}{20/16} & \optotype{\factor\SetH}{UDOVPKCLZERFTH} \\
+\acuity{6/4}{20/13} & \optotype{\factor\SetI}{TROFVDHKPZENLCU} \\
+\end{longtable}
+\end{center}
+
+% Tables
+
+\pagebreak
+\begin{center}
+\renewcommand*{\arraystretch}{3.5}
+\begin{longtable}{rc}
+\acuity{6/60}{20/200} & \optotype{\factor\SetA}{D} \\
+\acuity{6/36}{20/120} & \optotype{\factor\SetB}{OP} \\
+\acuity{6/30}{20/100} & \optotype{\factor\SetC}{NVK} \\
+\acuity{6/24}{20/80} & \optotype{\factor\SetD}{LENR} \\
+\acuity{6/18}{20/60} & \optotype{\factor\SetE}{TRCUE} \\
+& \colorrule{cyan}{0.65cm} \\
+\acuity{6/12}{20/40} & \optotype{\factor\SetF}{ONTHZEUL} \\
+\acuity{6/6}{20/20} & \optotype{\factor\SetG}{DKHZLTUNVOFP} \\
+& \colorrule{red}{0.65cm} \\
+\acuity{6/5}{20/16} & \optotype{\factor\SetH}{FDOLPVHRCEUZTN} \\
+\acuity{6/4}{20/13} & \optotype{\factor\SetI}{ZVORFCKLUDEHTNP} \\
+\end{longtable}
+\end{center}
+
+% Tables
+
+\pagebreak
+\begin{center}
+\renewcommand*{\arraystretch}{3.5}
+\begin{longtable}{rc}
+\acuity{6/60}{20/200} & \optotype{\factor\SetA}{T} \\
+\acuity{6/36}{20/120} & \optotype{\factor\SetB}{OL} \\
+\acuity{6/30}{20/100} & \optotype{\factor\SetC}{UVK} \\
+\acuity{6/24}{20/80} & \optotype{\factor\SetD}{UTHE} \\
+\acuity{6/18}{20/60} & \optotype{\factor\SetE}{HFPLN} \\
+& \colorrule{cyan}{0.65cm} \\
+\acuity{6/12}{20/40} & \optotype{\factor\SetF}{UENKVPCR} \\
+\acuity{6/6}{20/20} & \optotype{\factor\SetG}{FROPZDTVKCEN} \\
+& \colorrule{red}{0.65cm} \\
+\acuity{6/5}{20/16} & \optotype{\factor\SetH}{TRHZNEVFPDOCKU} \\
+\acuity{6/4}{20/13} & \optotype{\factor\SetI}{EOTKLPHNZRUFDVC} \\
+\end{longtable}
+\end{center}
+
+% Tables
+
+\pagebreak
+\begin{center}
+\renewcommand*{\arraystretch}{3.5}
+\begin{longtable}{rc}
+\acuity{6/60}{20/200} & \optotype{\factor\SetA}{K} \\
+\acuity{6/36}{20/120} & \optotype{\factor\SetB}{DP} \\
+\acuity{6/30}{20/100} & \optotype{\factor\SetC}{NLC} \\
+\acuity{6/24}{20/80} & \optotype{\factor\SetD}{RKTL} \\
+\acuity{6/18}{20/60} & \optotype{\factor\SetE}{OLHEC} \\
+& \colorrule{cyan}{0.65cm} \\
+\acuity{6/12}{20/40} & \optotype{\factor\SetF}{DLZCRUEV} \\
+\acuity{6/6}{20/20} & \optotype{\factor\SetG}{VHLOKCPNDEZT} \\
+& \colorrule{red}{0.65cm} \\
+\acuity{6/5}{20/16} & \optotype{\factor\SetH}{EKULVTNFZRHPOC} \\
+\acuity{6/4}{20/13} & \optotype{\factor\SetI}{UVLODHFRTKNCEPZ} \\
+\end{longtable}
+\end{center}
+
+% Tables
+
+\pagebreak
+\begin{center}
+\renewcommand*{\arraystretch}{3.5}
+\begin{longtable}{rc}
+\acuity{6/60}{20/200} & \optotype{\factor\SetA}{Z} \\
+\acuity{6/36}{20/120} & \optotype{\factor\SetB}{FH} \\
+\acuity{6/30}{20/100} & \optotype{\factor\SetC}{TKN} \\
+\acuity{6/24}{20/80} & \optotype{\factor\SetD}{KTCL} \\
+\acuity{6/18}{20/60} & \optotype{\factor\SetE}{DRKVL} \\
+& \colorrule{cyan}{0.65cm} \\
+\acuity{6/12}{20/40} & \optotype{\factor\SetF}{FOUDHLCZ} \\
+\acuity{6/6}{20/20} & \optotype{\factor\SetG}{UDOZVLCHEKRN} \\
+& \colorrule{red}{0.65cm} \\
+\acuity{6/5}{20/16} & \optotype{\factor\SetH}{VUFRZOPKELCNTD} \\
+\acuity{6/4}{20/13} & \optotype{\factor\SetI}{HTZKRVFODUELNCP} \\
+\end{longtable}
+\end{center}
+
+% Tables
+
+\pagebreak
+\begin{center}
+\renewcommand*{\arraystretch}{3.5}
+\begin{longtable}{rc}
+\acuity{6/60}{20/200} & \optotype{\factor\SetA}{U} \\
+\acuity{6/36}{20/120} & \optotype{\factor\SetB}{LN} \\
+\acuity{6/30}{20/100} & \optotype{\factor\SetC}{DFH} \\
+\acuity{6/24}{20/80} & \optotype{\factor\SetD}{VLEK} \\
+\acuity{6/18}{20/60} & \optotype{\factor\SetE}{KLODE} \\
+& \colorrule{cyan}{0.65cm} \\
+\acuity{6/12}{20/40} & \optotype{\factor\SetF}{HFTZNRKE} \\
+\acuity{6/6}{20/20} & \optotype{\factor\SetG}{ZVNLTDPRHCKE} \\
+& \colorrule{red}{0.65cm} \\
+\acuity{6/5}{20/16} & \optotype{\factor\SetH}{VHNOFKREUDZLCP} \\
+\acuity{6/4}{20/13} & \optotype{\factor\SetI}{KFLPDVRCTUNEHOZ} \\
+\end{longtable}
+\end{center}
+
+\end{document}
