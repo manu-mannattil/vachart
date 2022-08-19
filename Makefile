@@ -3,8 +3,8 @@
 all: snellen.pdf
 
 %.pdf: %.tex
-	xelatex $<
-	command -v pdfsizeopt && pdfsizeopt $@ $@; true
+	xelatex -file-line-error -interaction=nonstopmode --shell-escape $<
+	command -v pdfsizeopt && pdfsizeopt --quiet $@ $@; true
 
 clean:
 	rm -f *.aux *.log *.out
