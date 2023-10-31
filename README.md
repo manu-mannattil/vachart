@@ -25,10 +25,11 @@ $$w = 2d\tan(\varphi/2).$$
 
 A person's vision is considered normal (i.e., 6/6 or 20/20 vision) if he
 or she can delineate 1-arcminute-wide features of an optotype that has
-an angular width of 5 arcminutes.  Conventionally, the Snellen chart is
-kept at a distance of 6 m.  This means that the optotype width must be
+an angular width of 5 arcminutes (= $π/2160~\text{rad}$).  So if the Snellen chart is to be kept
+at a distance of 3m (as with the example PDF), the optotype width must
+be
 
-$$w = (12~\text{m})\times\tan(\pi/4320) = 8.73~\text{mm}.$$
+$$w = (2×3~\text{m})\times\tan[(\pi/2160)/2] = 4.36~\text{mm}.$$
 
 ## Further reading
 
